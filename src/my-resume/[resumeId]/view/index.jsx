@@ -17,12 +17,14 @@ function ViewResume() {
     },[])
     
     const GetResumeInfo = async () => {
-        try {
-            const resp = await GlobalApi.GetResumeById(resumeId);
+    //     try {
+           
+    //     } catch (error) {
+    //         console.error("Error fetching resume info:", error);
+    //     }
+    // }
+         const resp = await GlobalApi.GetResumeById(resumeId);
             setResumeInfo(resp.data.data);
-        } catch (error) {
-            console.error("Error fetching resume info:", error);
-        }
     }
     
     if (!resumeInfo) {
