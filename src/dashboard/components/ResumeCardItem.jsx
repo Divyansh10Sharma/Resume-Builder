@@ -49,14 +49,14 @@ function ResumeCardItem({resume,refreshData}) {
       
         <div className=''>
           <Link to={'/dashboard/resume/'+resume.documentId+"/edit"}>
-            <div className={`border p-3 flex justify-between rounded-b-lg shadow-lg  ${resume?.themeColor ? 'text-white' : 'text-black'}`} style={{background:resume?.themeColor}}>
+            <div className='p-14 bg-gradient-to-b from-pink-100 via-purple-200 to-blue-200 h-[280px] rounded-t-lg border-t-4' style={{borderColor:resume?.themeColor}}>
                   <div className='flex items-center justify-center h-[180px] '>
                     {/* <Notebook/> */}
                     <img src="/cv.png" width={80} height={80} />
                   </div>
             </div>
           </Link>
-          <div className='border p-3 flex justify-between  text-black rounded-b-lg shadow-lg' style={{background:resume?.themeColor}}>
+          <div className={`border p-3 flex justify-between rounded-b-lg shadow-lg  ${resume?.themeColor ? 'text-white' : 'text-black'}`} style={{background:resume?.themeColor}}>
             <h2 className='text-sm'>{resume.title}</h2>
           
             <DropdownMenu>
