@@ -12,14 +12,21 @@ function ViewResume() {
     const [resumeInfo,setResumeInfo]=useState();
     const {resumeId}=useParams();
 
-    useEffect(()=>{
+    useEffect(() => {
         GetResumeInfo();
-    },[])
-    const GetResumeInfo=()=>{
-        GlobalApi.GetResumeById(resumeId).then(resp=>{
-            console.log(resp.data.data);
+    }, []);
+    
+    const GetResumeInfo = async () => {
+        try {
+            const resp = await GlobalApi.GetResumeById(resumeId);
             setResumeInfo(resp.data.data);
-        })
+        } catch (error) {
+            console.error("Error fetching resume info:", error);
+        }
+    }
+
+    if (!resumeInfo) {
+        return <div>Loading...</div>; // Or a more sophisticated loading component
     }
 
     const HandleDownload=()=>{
@@ -27,7 +34,7 @@ function ViewResume() {
     }
 
   return (
-    <ResumeInfoContext.Provider value={{resumeInfo,setResumeInfo}} >
+    <ResumeInfoContext.Provider value={{resumeInfo}} >
         <div id="no-print">
         <Header/>
 
