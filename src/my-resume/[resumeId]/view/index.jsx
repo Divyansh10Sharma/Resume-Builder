@@ -9,7 +9,7 @@ import { RWebShare } from 'react-web-share'
 
 function ViewResume() {
 
-    const [resumeInfo,setResumeInfo]=useState();
+     const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext);
     const {resumeId}=useParams();
 
     useEffect(()=>{
