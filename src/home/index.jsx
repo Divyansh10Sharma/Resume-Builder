@@ -68,8 +68,7 @@ function Home() {
         <h2 className="mt-4 text-xl font-bold text-black">Write promot for your form</h2>
 
         <p className="mt-1 text-sm text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-          distinctio alias voluptatum blanditiis laudantium.
+          AI applications have revolutionized various industries by enhancing productivity, efficiency, and innovation. From healthcare to finance, artificial intelligence is transforming traditional processes by automating tasks, providing insights through data analysis, and optimizing decision-making. In healthcare, AI-driven technologies assist in diagnosing diseases, personalizing treatment plans, and predicting patient outcomes, improving overall care quality and saving lives.
         </p>
       </a>
 
@@ -82,8 +81,7 @@ function Home() {
         <h2 className="mt-4 text-xl font-bold text-black">Edit Your form </h2>
 
         <p className="mt-1 text-sm text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-          distinctio alias voluptatum blanditiis laudantium.
+          In the business world, AI applications streamline operations, improve customer service, and enhance marketing strategies. Automation of repetitive tasks and processes allows employees to focus on more strategic endeavors. Machine learning models, for example, analyze consumer behavior patterns to predict trends and optimize product recommendations, providing a more tailored customer experience. Additionally, AI-powered chatbots have revolutionized customer service by offering 24/7 assistance and resolving queries efficiently.
         </p>
       </a>
 
@@ -96,8 +94,7 @@ function Home() {
         <h2 className="mt-4 text-xl font-bold text-black">Share & Start Accepting Responses</h2>
 
         <p className="mt-1 text-sm text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-          distinctio alias voluptatum blanditiis laudantium.
+          AI's influence extends to industries like transportation, manufacturing, and entertainment, with autonomous vehicles, smart factories, and AI-generated content reshaping the way businesses operate. As the technology continues to evolve, the future promises even greater advances, including the integration of AI in everyday life, further blurring the lines between human and machine-driven intelligence. The potential of AI applications is limitless, as they continue to push boundaries and unlock new possibilities across various sectors.       
         </p>
       </a>
 
