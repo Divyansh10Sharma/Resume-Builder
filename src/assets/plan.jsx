@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 
-
+const INR = (amount) => `₹${amount.toLocaleString()}`;
 
 const plans = [
   {
     id: 'basic',
     title: 'Basic',
-    price: '$9.99',
-    period: 'month',
+    monthlyPrice: 129,
     description: 'Everything you need to create a professional resume',
     buttonText: 'Get Started',
     popular: false,
@@ -26,8 +25,7 @@ const plans = [
   {
     id: 'pro',
     title: 'Professional',
-    price: '$19.99',
-    period: 'month',
+    monthlyPrice: 889,
     description: 'Advanced features to stand out from the competition',
     buttonText: 'Get Professional',
     popular: true,
@@ -45,8 +43,7 @@ const plans = [
   {
     id: 'premium',
     title: 'Enterprise',
-    price: '$29.99',
-    period: 'month',
+    monthlyPrice: 1299,
     description: 'Complete career toolkit for job seekers',
     buttonText: 'Get Enterprise',
     popular: false,
@@ -64,10 +61,18 @@ const plans = [
 ];
 
 function Plan() {
+  const [isYearly, setIsYearly] = useState(false);
+
+  const getPrice = (price) => {
+    if (isYearly) return INR(Math.round(price * 12 * 0.8));
+    return INR(price);
+  };
+
+  const getPeriod = () => (isYearly ? 'year' : 'month');
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16">
       <div className="container mx-auto px-4">
-        {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Choose Your <span className="text-blue-900">Perfect Plan</span>
@@ -75,43 +80,41 @@ function Plan() {
           <p className="text-lg text-gray-600 mb-8 md:mb-12">
             Select the plan that fits your career goals. Upgrade or downgrade anytime.
           </p>
-          
+
           <div className="inline-flex items-center rounded-full p-1 bg-gray-100 mb-8">
-            <button className="py-2 px-4 rounded-full bg-blue-900 text-white focus:outline-none">
+            <button 
+              onClick={() => setIsYearly(false)}
+              className={`py-2 px-4 rounded-full focus:outline-none ${!isYearly ? 'bg-blue-900 text-white' : 'text-gray-700 hover:bg-gray-200'}`}
+            >
               Monthly
             </button>
-            <button className="py-2 px-4 rounded-full text-gray-700 hover:bg-gray-200 transition-colors focus:outline-none">
+            <button 
+              onClick={() => setIsYearly(true)}
+              className={`py-2 px-4 rounded-full focus:outline-none ${isYearly ? 'bg-blue-900 text-white' : 'text-gray-700 hover:bg-gray-200'}`}
+            >
               Yearly (Save 20%)
             </button>
           </div>
         </div>
 
-        {/* Pricing Cards */}
         <div className="mt-8 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {plans.map((plan) => (
-            <div 
-              key={plan.id}
-              className={`${plan.popular ? 'transform md:-translate-y-4' : ''}`}
-            >
-              <div 
-                className={`flex flex-col p-6 md:p-8 rounded-2xl shadow-lg transition-all duration-300 h-full 
-                ${plan.popular ? 'border-2 border-teal-600 scale-105 bg-white z-10' : 'bg-white hover:scale-102 border border-gray-200'}`}
-              >
+            <div key={plan.id} className={`${plan.popular ? 'transform md:-translate-y-4' : ''}`}>
+              <div className={`flex flex-col p-6 md:p-8 rounded-2xl shadow-lg transition-all duration-300 h-full 
+                ${plan.popular ? 'border-2 border-teal-600 scale-105 bg-white z-10' : 'bg-white hover:scale-102 border border-gray-200'}`}>
                 {plan.popular && (
                   <div className="py-1 px-4 bg-teal-600 text-white text-sm font-medium rounded-full inline-block self-start mb-4">
                     Recommended
                   </div>
                 )}
-                
+
                 <h3 className="text-xl font-bold text-gray-900">{plan.title}</h3>
-                
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-4xl font-extrabold text-gray-900">{plan.price}</span>
-                  <span className="ml-1 text-xl font-medium text-gray-500">/{plan.period}</span>
+                  <span className="text-4xl font-extrabold text-gray-900">{getPrice(plan.monthlyPrice)}</span>
+                  <span className="ml-1 text-xl font-medium text-gray-500">/{getPeriod()}</span>
                 </div>
-                
                 <p className="mt-3 text-gray-600">{plan.description}</p>
-                
+
                 <div className="mt-6 flex-grow">
                   <ul className="space-y-4">
                     {plan.features.map((feature, index) => (
@@ -126,12 +129,12 @@ function Plan() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <button 
                   className={`mt-8 w-full py-3 px-4 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-300
-                  ${plan.popular 
-                    ? 'bg-teal-600 text-white hover:bg-teal-700 focus:ring-teal-500' 
-                    : 'bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-700'}`}
+                    ${plan.popular 
+                      ? 'bg-teal-600 text-white hover:bg-teal-700 focus:ring-teal-500' 
+                      : 'bg-blue-900 text-white hover:bg-blue-800 focus:ring-blue-700'}`}
                 >
                   {plan.buttonText}
                 </button>
@@ -140,7 +143,6 @@ function Plan() {
           ))}
         </div>
 
-        {/* Footer Section */}
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-4">All plans include:</p>
           <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
