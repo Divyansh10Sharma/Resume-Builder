@@ -7,7 +7,7 @@ const plans = [
   {
     id: 'basic',
     title: 'Basic',
-    monthlyPrice: 129,
+    monthlyPrice: 89,
     description: 'Everything you need to create a professional resume',
     buttonText: 'Get Started',
     popular: false,
@@ -25,7 +25,7 @@ const plans = [
   {
     id: 'pro',
     title: 'Professional',
-    monthlyPrice: 889,
+    monthlyPrice: 129,
     description: 'Advanced features to stand out from the competition',
     buttonText: 'Get Professional',
     popular: true,
@@ -43,7 +43,7 @@ const plans = [
   {
     id: 'premium',
     title: 'Enterprise',
-    monthlyPrice: 1299,
+    monthlyPrice: 189,
     description: 'Complete career toolkit for job seekers',
     buttonText: 'Get Enterprise',
     popular: false,
