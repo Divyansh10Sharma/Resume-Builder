@@ -53,47 +53,48 @@ function Home() {
     </div>
 </section>
 <section className="py-8 bg-white z-50 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-<h2 className="font-bold text-3xl">How it Works?</h2>
-<h2 className="text-md text-gray-500">Give mock interview in just 3 simplar easy step</h2>
-
+<h2 className="text-4xl font-extrabold text-purple-800 tracking-tight sm:text-5xl">
+  How It Works
+</h2>
+<p className="mt-2 text-lg text-gray-600 sm:text-xl">
+  Launch your mock interview in just <span className="text-purple-700 font-semibold">3 simple steps</span>
+</p>
 <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-      <a
-        className="block rounded-xl border bg-white
-         border-gray-200 p-8 shadow-xl transition
-         hover:border-pink-500/10 hover:shadow-pink-500/10"
-        href="#"
-      >
-       <AtomIcon className='h-8 w-8'/>
+<a
+  className="block rounded-2xl border bg-white/90 backdrop-blur-lg border-purple-300 p-8 shadow-lg transition transform hover:scale-105 hover:border-purple-600 hover:shadow-purple-400/30"
+  href="#"
+>
+  <AtomIcon className='h-8 w-8 text-purple-700' />
 
-        <h2 className="mt-4 text-xl font-bold text-black">Write promot for your form</h2>
+       <h2 className="mt-4 text-xl font-extrabold text-purple-800">Write prompt for your form</h2>
 
-        <p className="mt-1 text-sm text-gray-600">
+       <p className="mt-2 text-sm text-gray-700">
           AI applications have revolutionized various industries by enhancing productivity, efficiency, and innovation. From healthcare to finance, artificial intelligence is transforming traditional processes by automating tasks, providing insights through data analysis, and optimizing decision-making. In healthcare, AI-driven technologies assist in diagnosing diseases, personalizing treatment plans, and predicting patient outcomes, improving overall care quality and saving lives.
         </p>
       </a>
 
       <a
-        className="block rounded-xl border bg-white border-gray-200 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-        href="#"
-      >
-      <Edit className='h-8 w-8'/>
+  className="block rounded-2xl border bg-white/90 backdrop-blur-lg border-purple-300 p-8 shadow-lg transition transform hover:scale-105 hover:border-purple-600 hover:shadow-purple-400/30"
+  href="#"
+>
+  <Edit className='h-8 w-8 text-purple-700' />
 
-        <h2 className="mt-4 text-xl font-bold text-black">Edit Your form </h2>
+      <h2 className="mt-4 text-xl font-extrabold text-purple-800">Edit your form</h2>
 
-        <p className="mt-1 text-sm text-gray-600">
+      <p className="mt-2 text-sm text-gray-700">
           In the business world, AI applications streamline operations, improve customer service, and enhance marketing strategies. Automation of repetitive tasks and processes allows employees to focus on more strategic endeavors. Machine learning models, for example, analyze consumer behavior patterns to predict trends and optimize product recommendations, providing a more tailored customer experience. Additionally, AI-powered chatbots have revolutionized customer service by offering 24/7 assistance and resolving queries efficiently.
         </p>
       </a>
 
       <a
-        className="block rounded-xl border bg-white border-gray-200 p-8 shadow-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-        href="#"
-      >
-      <Share2 className='h-8 w-8' />
+  className="block rounded-2xl border bg-white/90 backdrop-blur-lg border-purple-300 p-8 shadow-lg transition transform hover:scale-105 hover:border-purple-600 hover:shadow-purple-400/30"
+  href="#"
+>
+  <Share2 className='h-8 w-8 text-purple-700' />
 
-        <h2 className="mt-4 text-xl font-bold text-black">Share & Start Accepting Responses</h2>
+      <h2 className="mt-4 text-xl font-extrabold text-purple-800">Share & Start accepting Responses</h2>
 
-        <p className="mt-1 text-sm text-gray-600">
+      <p className="mt-2 text-sm text-gray-700">
           AI's influence extends to industries like transportation, manufacturing, and entertainment, with autonomous vehicles, smart factories, and AI-generated content reshaping the way businesses operate. As the technology continues to evolve, the future promises even greater advances, including the integration of AI in everyday life, further blurring the lines between human and machine-driven intelligence. The potential of AI applications is limitless, as they continue to push boundaries and unlock new possibilities across various sectors.       
         </p>
       </a>
@@ -102,12 +103,12 @@ function Home() {
     </div>
 
     <div className="mt-12 text-center">
-      <a
-        href="/sign-in"
-        className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
-      >
-        Get Started Today
-      </a>
+    <a
+  href="/sign-in"
+  className="inline-block rounded-2xl bg-purple-700 px-12 py-4 text-lg font-semibold text-white shadow-lg transition transform hover:bg-purple-800 hover:scale-105 hover:shadow-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400"
+>
+  Get Started Today
+</a>
     </div>
     </section>
   </div>
