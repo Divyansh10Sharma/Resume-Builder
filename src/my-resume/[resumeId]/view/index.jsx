@@ -7,10 +7,11 @@ import { Button } from '@/components/ui/button';
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
 import GlobalApi from './../../../../service/GlobalApi';
 
-import Template1 from '@/dashboard/resume/templates/Template1';
-import Template2 from '@/dashboard/resume/templates/Template2';
-import Template3 from '@/dashboard/resume/templates/Template3';
-import Template4 from '@/dashboard/resume/templates/Template4';
+import Template1 from '@/dashboard/resume/components/templates/Template1';
+import Template2 from '@/dashboard/resume/components/templates/Template2';
+import Template3 from '@/dashboard/resume/components/templates/Template3';
+import Template4 from '@/dashboard/resume/components/templates/Template4';
+import Template5 from '@/dashboard/resume/components/templates/Template5';
 
 function ViewResume() {
     const [resumeInfo, setResumeInfo] = useState();
