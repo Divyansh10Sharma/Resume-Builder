@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import FormSection from '../../components/FormSection';
 import ResumePreview from '../../components/ResumePreview';
