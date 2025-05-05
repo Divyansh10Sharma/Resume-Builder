@@ -2,11 +2,12 @@ import React, { useEffect, useState, useRef, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import FormSection from '../../components/FormSection';
 import ResumePreview from '../../components/ResumePreview';
-import { ResumeInfoContext } from '@/context/ResumeInfoContext';
+
 import GlobalApi from './../../../../../service/GlobalApi';
 import Template1 from '../../components/templates/Template1';
 import Template2 from '../../components/templates/Template2';
 import { useReactToPrint } from 'react-to-print';
+import { ResumeInfoContext } from '@/context/ResumeInfoContext';
 
 function EditResume() {
     const {resumeId} = useParams();
