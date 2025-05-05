@@ -44,9 +44,10 @@ function ViewResume() {
     };
 
     const templateId = localStorage.getItem('TemplateUsed')
-
-    const renderTemplate = () => {
-        console.log('LocalStporage : ', templateId)
+    console.log('LocalStporage : ', templateId)
+    
+    const renderTemplate = (templateId) => {
+        console.log('In functyion : ', templateId)
         switch (templateId) {
             case 'template1':
                 return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
@@ -94,7 +95,7 @@ function ViewResume() {
                 </div>
             </div>
             <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
-                {renderTemplate(resumeInfo?.templateId)}
+                {renderTemplate(templateId)}
             </div>
         </ResumeInfoContext.Provider>
     );
