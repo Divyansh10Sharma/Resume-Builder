@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-const Template2 = forwardRef(({ resumeInfo }, ref) => {
+const Template3 = forwardRef(({ resumeInfo }, ref) => {
     if (!resumeInfo) return null;
 
     return (
