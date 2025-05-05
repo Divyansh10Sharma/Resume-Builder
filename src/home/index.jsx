@@ -6,6 +6,7 @@ import TemplatesSection from '@/components/custom/TemplatesSection';
 import PricingSection from '@/components/custom/PricingSection';
 import Footer from '@/components/custom/Footer';
 import { AtomIcon, Edit, Share2 } from 'lucide-react';
+import TestimonialsSection from '@/components/custom/TestimonialsSection';
 
 function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -58,6 +59,7 @@ function Home() {
         <FeaturesSection />
         <TemplatesSection />
         <PricingSection />
+        <TestimonialsSection/>
       </main>
       <Footer />
     </div>
