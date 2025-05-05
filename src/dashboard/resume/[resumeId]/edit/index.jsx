@@ -10,7 +10,7 @@ import { useReactToPrint } from 'react-to-print';
 
 function EditResume() {
     const {resumeId} = useParams();
-    const [resumeInfo, setResumeInfo] = useState();
+    const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext);
     const [selectedTemplate, setSelectedTemplate] = useState('template1');
     const componentRef = useRef();
 
