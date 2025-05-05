@@ -2,17 +2,16 @@ import React, { useEffect, useState, useRef, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import FormSection from '../../components/FormSection';
 import ResumePreview from '../../components/ResumePreview';
-
 import GlobalApi from './../../../../../service/GlobalApi';
 import Template1 from '../../components/templates/Template1';
 import Template2 from '../../components/templates/Template2';
 import { useReactToPrint } from 'react-to-print';
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
-import { Underline } from 'lucide-react';
 
 function EditResume() {
     const {resumeId} = useParams();
-    const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext);
+    const {resumeInfo, setResumeInfo}=useContext(ResumeInfoContext);
+
     const [selectedTemplate, setSelectedTemplate] = useState('template1');
     const componentRef = useRef();
 
@@ -37,6 +36,7 @@ function EditResume() {
     });
 
     const renderTemplate = () => {
+      console.log("RRRRRRRRRRRRRRRRRR : ", resumeInfo)
         switch (selectedTemplate) {
             case 'template1':
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
@@ -48,7 +48,6 @@ function EditResume() {
     };
 
     return (
-        <ResumeInfoContext.Provider value={{resumeInfo, setResumeInfo}}>
             <div className='p-10'>
                 <div className='mb-6 flex justify-between items-center'>
                     <div>
@@ -77,13 +76,12 @@ function EditResume() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                     <FormSection />
-                   { resumeInfo !==undefined &&
+                  
                     <div>
                         {renderTemplate()}
-                    </div>}
+                    </div>
                 </div>
             </div>
-        </ResumeInfoContext.Provider>
     );
 }
 
