@@ -92,4 +92,4 @@ const Template2 = forwardRef(({ resumeInfo }, ref) => {
     );
 });
 
-export default Template2;
+export default Template3;
