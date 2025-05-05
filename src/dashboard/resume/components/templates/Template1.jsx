@@ -27,7 +27,7 @@ const Template1 = forwardRef(({ resumeInfo }, ref) => {
             {/* Work Experience */}
             <section className='mb-6'>
                 <h2 className='text-xl font-semibold border-b mb-2'>Work Experience</h2>
-                {resumeInfo?.experience?.map((exp, index) => (
+                {resumeInfo?.Experience?.map((exp, index) => (
                     <div key={index} className='mb-4'>
                         <h3 className='font-medium text-lg'>{exp?.title}</h3>
                         <p className='text-gray-600'>
