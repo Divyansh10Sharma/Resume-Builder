@@ -6,6 +6,7 @@ import GlobalApi from './../../../../../service/GlobalApi';
 import Template1 from '../../components/templates/Template1';
 import Template2 from '../../components/templates/Template2';
 import Template3 from '../../components/templates/Template3';
+import Template4 from '../../components/templates/Template4';
 import { useReactToPrint } from 'react-to-print';
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
 
@@ -45,6 +46,8 @@ function EditResume() {
                 return <Template2 resumeInfo={resumeInfo} ref={componentRef} />;
             case 'template3':
                 return <Template3 resumeInfo={resumeInfo} ref={componentRef} />;
+            case 'template4':
+                return <Template4 resumeInfo={resumeInfo} ref={componentRef} />;
             
             default:
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
@@ -74,6 +77,12 @@ function EditResume() {
                                 className={`px-4 py-2 rounded ${selectedTemplate === 'template3' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                             >
                                 Template 3
+                            </button>
+                            <button 
+                                onClick={() => handleTemplateChange('template4')}
+                                className={`px-4 py-2 rounded ${selectedTemplate === 'template4' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                Template 4
                             </button>
                         </div>
                     </div>
