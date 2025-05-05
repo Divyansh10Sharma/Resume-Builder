@@ -44,14 +44,19 @@ function ViewResume() {
     };
 
     const renderTemplate = (templateId) => {
-        console.log('ASSSSS : ', templateId)
         switch (templateId) {
-            case 'template1': return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
-            case 'template2': return <Template2 resumeInfo={resumeInfo} ref={printRef} />;
-            case 'template3': return <Template3 resumeInfo={resumeInfo} ref={printRef} />;
-            case 'template4': return <Template4 resumeInfo={resumeInfo} ref={printRef} />;
-            case 'template4': return <Template5 resumeInfo={resumeInfo} ref={printRef} />;
-            default: return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
+            case 'template1':
+                return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
+            case 'template2':
+                return <Template2 resumeInfo={resumeInfo} ref={printRef} />;
+            case 'template3':
+                return <Template3 resumeInfo={resumeInfo} ref={printRef} />;
+            case 'template4':
+                return <Template4 resumeInfo={resumeInfo} ref={printRef} />;
+            case 'template5':
+                return <Template5 resumeInfo={resumeInfo} ref={printRef} />;
+            default:
+                return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
         }
     };
 
