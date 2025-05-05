@@ -8,6 +8,7 @@ import Template1 from '../../components/templates/Template1';
 import Template2 from '../../components/templates/Template2';
 import { useReactToPrint } from 'react-to-print';
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
+import { Underline } from 'lucide-react';
 
 function EditResume() {
     const {resumeId} = useParams();
@@ -76,9 +77,10 @@ function EditResume() {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                     <FormSection />
+                   { resumeInfo !==undefined &&
                     <div>
                         {renderTemplate()}
-                    </div>
+                    </div>}
                 </div>
             </div>
         </ResumeInfoContext.Provider>
