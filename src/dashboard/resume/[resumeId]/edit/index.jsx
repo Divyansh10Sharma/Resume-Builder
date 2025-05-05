@@ -42,6 +42,9 @@ function EditResume() {
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
             case 'template2':
                 return <Template2 resumeInfo={resumeInfo} ref={componentRef} />;
+            case 'template1':
+                return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
+            
             default:
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
         }
