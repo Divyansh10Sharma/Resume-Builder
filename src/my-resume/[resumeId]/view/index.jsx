@@ -70,7 +70,7 @@ function ViewResume() {
                 <Header />
                 <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
                     <h2 className='text-center text-2xl font-medium'>
-                        Congratssssssss! Your Ultimate AI generated Resume is ready!
+                        Congratssssssss! Your Ultimate AI generated Resume is ready! with {resumeInfo?.templateId}
                     </h2>
                     <p className='text-center text-gray-400'>
                         Download or share your resume with a unique link
