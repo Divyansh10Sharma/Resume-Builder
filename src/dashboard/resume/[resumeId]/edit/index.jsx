@@ -95,12 +95,7 @@ function EditResume() {
                             </button>
                         </div>
                     </div>
-                    <button 
-                        onClick={handlePrint}
-                        className='px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600'
-                    >
-                        Download PDF
-                    </button>
+                   
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                     <FormSection />
