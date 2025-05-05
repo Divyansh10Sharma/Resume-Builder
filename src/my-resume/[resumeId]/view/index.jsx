@@ -43,8 +43,10 @@ function ViewResume() {
         html2pdf().from(element).set(opt).save();
     };
 
-    const renderTemplate = (templateId) => {
-        console.log('UUUUUUUUUUUUUUUUU :', templateId)
+    const templateId = localStorage.getItem('TemplateUsed')
+
+    const renderTemplate = () => {
+        
         switch (templateId) {
             case 'template1':
                 return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
