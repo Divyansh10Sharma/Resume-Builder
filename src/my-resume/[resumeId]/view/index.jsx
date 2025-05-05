@@ -43,8 +43,8 @@ function ViewResume() {
         html2pdf().from(element).set(opt).save();
     };
 
-    const renderTemplate = () => {
-        switch (resumeInfo?.templateId) {
+    const renderTemplate = (templateId) => {
+        switch (templateId) {
             case 1: return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
             case 2: return <Template2 resumeInfo={resumeInfo} ref={printRef} />;
             case 3: return <Template3 resumeInfo={resumeInfo} ref={printRef} />;
@@ -64,7 +64,7 @@ function ViewResume() {
                 <Header />
                 <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
                     <h2 className='text-center text-2xl font-medium'>
-                        Congrats! Your Ultimate AI generated Resume is ready!
+                        Congratssssssss! Your Ultimate AI generated Resume is ready!
                     </h2>
                     <p className='text-center text-gray-400'>
                         Download or share your resume with a unique link
@@ -85,7 +85,7 @@ function ViewResume() {
                 </div>
             </div>
             <div className='my-10 mx-10 md:mx-20 lg:mx-36'>
-                {renderTemplate()}
+                {renderTemplate(resumeInfo?.templateId)}
             </div>
         </ResumeInfoContext.Provider>
     );

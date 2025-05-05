@@ -33,7 +33,7 @@ function EditResume() {
       
       setResumeInfo((prev) => ({
           ...prev,
-          templateId: template.id, // or template.value, depending on your structure
+          templateId: template, // or template.value, depending on your structure
       }));
   };
     const handlePrint = useReactToPrint({
