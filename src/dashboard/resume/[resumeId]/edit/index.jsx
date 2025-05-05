@@ -7,6 +7,7 @@ import Template1 from '../../components/templates/Template1';
 import Template2 from '../../components/templates/Template2';
 import Template3 from '../../components/templates/Template3';
 import Template4 from '../../components/templates/Template4';
+import Template5 from '../../components/templates/Template5';
 import { useReactToPrint } from 'react-to-print';
 import { ResumeInfoContext } from '@/context/ResumeInfoContext';
 
@@ -48,6 +49,8 @@ function EditResume() {
                 return <Template3 resumeInfo={resumeInfo} ref={componentRef} />;
             case 'template4':
                 return <Template4 resumeInfo={resumeInfo} ref={componentRef} />;
+            case 'template5':
+                return <Template5 resumeInfo={resumeInfo} ref={componentRef} />;
             
             default:
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
@@ -83,6 +86,12 @@ function EditResume() {
                                 className={`px-4 py-2 rounded ${selectedTemplate === 'template4' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                             >
                                 Template 4
+                            </button>
+                            <button 
+                                onClick={() => handleTemplateChange('template5')}
+                                className={`px-4 py-2 rounded ${selectedTemplate === 'template5' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                Template 5
                             </button>
                         </div>
                     </div>
