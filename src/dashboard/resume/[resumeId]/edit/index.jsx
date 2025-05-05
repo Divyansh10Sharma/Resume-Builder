@@ -42,8 +42,8 @@ function EditResume() {
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
             case 'template2':
                 return <Template2 resumeInfo={resumeInfo} ref={componentRef} />;
-            case 'template1':
-                return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
+            case 'template3':
+                return <Template3 resumeInfo={resumeInfo} ref={componentRef} />;
             
             default:
                 return <Template1 resumeInfo={resumeInfo} ref={componentRef} />;
@@ -67,6 +67,12 @@ function EditResume() {
                                 className={`px-4 py-2 rounded ${selectedTemplate === 'template2' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
                             >
                                 Template 2
+                            </button>
+                            <button 
+                                onClick={() => handleTemplateChange('template3')}
+                                className={`px-4 py-2 rounded ${selectedTemplate === 'template3' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                            >
+                                Template 3
                             </button>
                         </div>
                     </div>
