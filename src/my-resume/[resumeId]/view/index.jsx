@@ -44,7 +44,8 @@ function ViewResume() {
     };
 
     const renderTemplate = (templateId) => {
-        switch (`template${templateId}`) {
+        console.log('UUUUUUUUUUUUUUUUU :', templateId)
+        switch (templateId) {
             case 'template1':
                 return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
             case 'template2':

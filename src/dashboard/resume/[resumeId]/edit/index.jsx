@@ -31,7 +31,7 @@ function EditResume() {
     const handleTemplateChange = (template) => {
       setSelectedTemplate(template);
 
-      console.log('TEMPOPPPPP : ', template)
+      localStorage.setItem('templateUsed', template)
       
       setResumeInfo((prev) => ({
           ...prev,
