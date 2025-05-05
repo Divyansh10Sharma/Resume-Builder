@@ -30,6 +30,8 @@ function EditResume() {
 
     const handleTemplateChange = (template) => {
       setSelectedTemplate(template);
+
+      console.log('TEMPOPPPPP : ', template)
       
       setResumeInfo((prev) => ({
           ...prev,
