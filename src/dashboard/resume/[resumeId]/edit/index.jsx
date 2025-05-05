@@ -29,9 +29,13 @@ function EditResume() {
     };
 
     const handleTemplateChange = (template) => {
-        setSelectedTemplate(template);
-    };
-
+      setSelectedTemplate(template);
+      
+      setResumeInfo((prev) => ({
+          ...prev,
+          templateId: template.id, // or template.value, depending on your structure
+      }));
+  };
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
         documentTitle: `Resume_${resumeId}`,

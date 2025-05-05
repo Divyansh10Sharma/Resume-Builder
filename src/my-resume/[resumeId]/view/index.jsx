@@ -48,6 +48,7 @@ function ViewResume() {
             case 2: return <Template2 resumeInfo={resumeInfo} ref={printRef} />;
             case 3: return <Template3 resumeInfo={resumeInfo} ref={printRef} />;
             case 4: return <Template4 resumeInfo={resumeInfo} ref={printRef} />;
+            case 4: return <Template5 resumeInfo={resumeInfo} ref={printRef} />;
             default: return <Template1 resumeInfo={resumeInfo} ref={printRef} />;
         }
     };
