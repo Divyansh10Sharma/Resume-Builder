@@ -4,7 +4,7 @@ import { Check, X } from 'lucide-react';
 const plans = [
   {
     name: 'Free',
-    price: '$0',
+    price: '89/-',
     period: 'forever',
     description: 'Perfect for trying out our basic templates',
     features: [
@@ -20,7 +20,7 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: '$12',
+    price: '129/-',
     period: 'per month',
     description: 'Best for professionals seeking their next career move',
     features: [
@@ -36,7 +36,7 @@ const plans = [
   },
   {
     name: 'Teams',
-    price: '$29',
+    price: '189/-',
     period: 'per month',
     description: 'For career coaches and small teams',
     features: [
