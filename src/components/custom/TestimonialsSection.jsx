@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    quote: "ResumeCraft helped me land my dream job! The templates are not only beautiful but also ATS-friendly. I got more interviews in one month than I did in six months with my old resume.",
+    quote: "ResumeAI helped me land my dream job! The templates are not only beautiful but also ATS-friendly. I got more interviews in one month than I did in six months with my old resume.",
     name: "Alexandra Chen",
     title: "Marketing Director",
     avatar: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    quote: "As someone who's not design-savvy, I was worried about creating a professional resume. ResumeCraft made it incredibly simple, and I received compliments on my resume design during interviews.",
+    quote: "As someone who's not design-savvy, I was worried about creating a professional resume. ResumeAI made it incredibly simple, and I received compliments on my resume design during interviews.",
     name: "Marcus Johnson",
     title: "Software Engineer",
     avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     id: 3,
-    quote: "The templates are sleek, modern, and versatile. I've recommended ResumeCraft to all my graduating classmates. Worth every penny for the premium templates!",
+    quote: "The templates are sleek, modern, and versatile. I've recommended ResumeAI to all my graduating classmates. Worth every penny for the premium templates!",
     name: "Sophia Rodriguez",
     title: "Recent Graduate",
     avatar: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

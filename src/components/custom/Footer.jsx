@@ -8,7 +8,7 @@ const Footer  = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-purple-600">
-              ResumeCraft
+              ResumeAI
             </h3>
             <p className="text-gray-400 mb-4">
               Helping professionals land their dream jobs with beautifully designed, ATS-friendly resume templates.
@@ -63,11 +63,11 @@ const Footer  = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} ResumeCraft. All rights reserved.
+            &copy; {new Date().getFullYear()} ResumeAI. All rights reserved.
           </p>
           
           <p className="text-gray-400 text-sm flex items-center">
-            Made with <Heart size={16} className="mx-1 text-purple-500" /> by ResumeCraft Team
+            Made with <Heart size={16} className="mx-1 text-purple-500" /> by ResumeAI Team
           </p>
         </div>
       </div>
