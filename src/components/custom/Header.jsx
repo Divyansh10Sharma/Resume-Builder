@@ -25,7 +25,7 @@ function Header({ darkMode, toggleDarkMode }) {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/dashboard">
-          <img src="/logo.svg" alt="Logo" width={150} height={150} className="cursor-pointer" />
+          <img src="/logo.png" alt="Logo" width={150} height={150} className="cursor-pointer" />
         </Link>
 
         <div className="hidden md:flex items-center space-x-6">
